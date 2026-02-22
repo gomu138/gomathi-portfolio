@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gomathi S | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#f5f3ff,#ede9fe,#ddd6fe);
+    color:#1e1b4b;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 25px rgba(91,45,181,0.08);
+}
+
+nav h2{
+    color:#6C2BD9;
+    font-weight:700;
+}
+
+nav a{
+    text-decoration:none;
+    margin-left:25px;
+    color:#4c1d95;
+    font-weight:500;
+    cursor:pointer;
+    position:relative;
+    transition:0.3s ease;
+}
+
+nav a.active,
+nav a:hover{
+    color:#6C2BD9;
+}
+
+nav a.active::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:3px;
+    background:linear-gradient(90deg,#7C3AED,#6C2BD9);
+    bottom:-6px;
+    left:0;
+    border-radius:10px;
+}
+
+/* SECTIONS */
+.section{
+    display:none;
+    padding:60px 8%;
+    height:calc(100vh - 80px);
+    overflow:auto;
+}
+
+.section.active{
+    display:block;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    gap:60px;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:40px;
+    color:#6C2BD9;
+    font-weight:700;
+}
+
+.hero-text h3{
+    margin:12px 0;
+    font-weight:500;
+    color:#5b21b6;
+}
+
+.hero-text p{
+    margin-top:15px;
+    line-height:1.8;
+    color:#374151;
+}
+
+.hero-img img{
+    width:260px;
+    border-radius:20px;
+    box-shadow:0 20px 50px rgba(124,58,237,0.25);
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.85);
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(124,58,237,0.08);
+    margin-bottom:25px;
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(124,58,237,0.15);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#6C2BD9;
+}
+
+/* SKILLS */
+.skills span{
+    display:inline-block;
+    background:linear-gradient(135deg,#7C3AED,#6C2BD9);
+    color:white;
+    padding:6px 14px;
+    border-radius:20px;
+    margin:6px;
+    font-size:13px;
+    box-shadow:0 5px 15px rgba(124,58,237,0.2);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Gomathi S</h2>
+    <div>
+        <a onclick="showSection('home', this)" class="active">Home</a>
+        <a onclick="showSection('about', this)">About</a>
+        <a onclick="showSection('education', this)">Education</a>
+        <a onclick="showSection('projects', this)">Projects</a>
+        <a onclick="showSection('internship', this)">Internship</a>
+        <a onclick="showSection('certifications', this)">Certifications</a>
+        <a onclick="showSection('contact', this)">Contact</a>
+    </div>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section active">
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Gomathi S</h1>
+            <h3>Information Technology Graduate</h3>
+
+            <p>
+                Dedicated and performance-driven Information Technology graduate with
+                a strong academic record (CGPA 9.11/10). Passionate about software development,
+                artificial intelligence, and data-driven solutions.
+            </p>
+
+            <p>
+                Experienced in developing AI-powered systems and responsive web
+                applications using Python, Java, SQL, HTML, CSS, and JavaScript.
+                Focused on building scalable and user-centric digital solutions.
+            </p>
+
+            <p>
+                Seeking an entry-level opportunity in a dynamic organization
+                where I can apply my technical expertise, contribute to impactful
+                projects, and continuously enhance my professional growth.
+            </p>
+        </div>
+
+        <div class="hero-img">
+            <!-- CHANGE IMAGE FILE NAME HERE -->
+            <img src="gomathi.jpg" alt="Gomathi S">
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+    <div class="card">
+        <h3>Professional Profile</h3>
+        Highly motivated IT professional with hands-on experience in programming,
+        web technologies, and AI-based systems. Strong analytical and problem-solving
+        abilities with a keen interest in emerging technologies and continuous learning.
+    </div>
+
+    <div class="card">
+        <h3>Technical Expertise</h3>
+        <div class="skills">
+            <span>Python</span>
+            <span>Java</span>
+            <span>C</span>
+            <span>SQL</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>MySQL</span>
+            <span>Power BI</span>
+            <span>MS Excel</span>
+            <span>Jupyter Notebook</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Core Competencies</h3>
+        <div class="skills">
+            <span>Communication</span>
+            <span>Team Collaboration</span>
+            <span>Leadership</span>
+            <span>Time Management</span>
+            <span>Adaptability</span>
+            <span>Critical Thinking</span>
+        </div>
+    </div>
+</div>
+
+<!-- EDUCATION -->
+<div id="education" class="section">
+    <div class="card">
+        <h3>B.Tech – Information Technology</h3>
+        Panimalar Engineering College, Chennai <br>
+        CGPA: 9.11 / 10 <br>
+        2023 – 2025
+    </div>
+
+    <div class="card">
+        <h3>Higher Secondary Education (State Board)</h3>
+        Sri Gomathi Ambal Matric Hr Sec School, Sankarankovil <br>
+        Percentage: 88.5% <br>
+        2022 – 2023
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+    <div class="card">
+        <h3>Munch Mate – AI Chatbot Platform</h3>
+        Developed an NLP-powered chatbot system that enhances user interaction
+        through personalized recommendations and automated responses.
+    </div>
+
+    <div class="card">
+        <h3>AI-COMPASS – Personalized Medicine System</h3>
+        Built a secure AI-based healthcare framework integrating federated learning,
+        deep learning, and reinforcement learning techniques.
+    </div>
+</div>
+
+<!-- INTERNSHIP -->
+<div id="internship" class="section">
+    <div class="card">
+        <h3>Web Development Intern – FalconX Edtech Solutions (2024)</h3>
+        Designed and developed responsive web applications using HTML, CSS,
+        and JavaScript. Collaborated in Agile workflows and maintained version control using Git.
+    </div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div id="certifications" class="section">
+    <div class="card">Oracle Cloud Infrastructure – Generative AI</div>
+    <div class="card">NPTEL – Data Science for Engineers</div>
+    <div class="card">NASSCOM – Acquiring Data</div>
+    <div class="card">ADPP – Advanced Diploma in Python Programming</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+    <div class="card">
+        Email: anugomathi2005@gmail.com <br>
+        GitHub: github.com/gomu138 <br>
+        LinkedIn: linkedin.com/in/gomathishanmugavel <br>
+        LeetCode: leetcode.com/u/gomathi_138
+    </div>
+</div>
+
+<script>
+function showSection(id, element){
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(section => section.classList.remove('active'));
+
+    let links = document.querySelectorAll('nav a');
+    links.forEach(link => link.classList.remove('active'));
+
+    document.getElementById(id).classList.add('active');
+    element.classList.add('active');
+}
+</script>
+
+</body>
+</html>
